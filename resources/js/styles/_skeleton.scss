@@ -1,0 +1,44 @@
+// Grey placeholder shapes shown while data is loading.
+.skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+
+    &__line,
+    &__card {
+        border-radius: var(--radius-m);
+        background: var(--color-surface-muted);
+        animation: skeleton-pulse 1.4s ease-in-out infinite;
+    }
+
+    &__line {
+        height: 1.25rem;
+
+        &_title {
+            width: min(24rem, 80%);
+            height: 2.5rem;
+        }
+
+        &_short {
+            width: min(12rem, 50%);
+        }
+    }
+
+    &__card {
+        height: 14rem;
+        margin-top: var(--space-3);
+    }
+}
+
+@keyframes skeleton-pulse {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skeleton__line,
+    .skeleton__card {
+        animation: none;
+    }
+}

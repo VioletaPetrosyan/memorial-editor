@@ -1,0 +1,70 @@
+// Theme tokens. Components only use these custom properties, so a theme is just a
+// different set of values (the dark theme below follows the OS setting).
+
+:root {
+    color-scheme: light;
+
+    --color-bg: #f6f5f1;
+    --color-surface: #ffffff;
+    --color-surface-muted: #efede7;
+    --color-text: #1f2328;
+    --color-text-muted: #59606a;
+    --color-border: #e1ded6;
+    --color-border-strong: #b9b5ab;
+    --color-primary: #3b5b7e;
+    --color-primary-hover: #2c4562;
+    --color-on-primary: #ffffff;
+    --color-link: #2f5d8a;
+    --color-focus: #4c8bf5;
+    --color-danger: #b42318;
+    --color-danger-hover: #912018;
+    --color-danger-surface: #fef3f2;
+    --color-success: #067647;
+    --color-success-surface: #e8f6ee;
+
+    --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: Georgia, 'Times New Roman', serif;
+    --font-size-s: 0.875rem;
+    --font-size-m: 1rem;
+    --font-size-l: 1.25rem;
+    --font-size-xl: 1.75rem;
+    --font-size-xxl: 2.5rem;
+
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2.5rem;
+
+    --radius-m: 8px;
+    --radius-l: 12px;
+    --shadow-card: 0 1px 2px rgb(31 35 40 / 0.06), 0 2px 8px rgb(31 35 40 / 0.04);
+    --shadow-overlay: 0 12px 40px rgb(15 23 42 / 0.25);
+
+    --content-width: 60rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+
+        --color-bg: #15171a;
+        --color-surface: #1e2125;
+        --color-surface-muted: #2a2e33;
+        --color-text: #e8e6e1;
+        --color-text-muted: #a3a7ad;
+        --color-border: #33373d;
+        --color-border-strong: #4d535a;
+        --color-primary: #7fa6d1;
+        --color-primary-hover: #9bbbe0;
+        --color-on-primary: #10161d;
+        --color-link: #8db4e0;
+        --color-danger: #f97066;
+        --color-danger-hover: #fda29b;
+        --color-danger-surface: #3a1d1b;
+        --color-success: #6ce9a6;
+        --color-success-surface: #163527;
+        --shadow-card: none;
+    }
+}

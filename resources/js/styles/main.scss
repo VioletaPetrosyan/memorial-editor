@@ -1,0 +1,9 @@
+// Global styles: theme tokens, base element styles and blocks shared by several
+// components or pages. Component-specific blocks live in each component's <style> section.
+@use 'tokens';
+@use 'base';
+@use 'button';
+@use 'notice';
+@use 'page';
+@use 'empty-state';
+@use 'skeleton';

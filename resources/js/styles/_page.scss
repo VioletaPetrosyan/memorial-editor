@@ -1,0 +1,60 @@
+@use 'breakpoints' as *;
+
+// Page layout shared by every page: header with title and actions, then content.
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+
+    &__header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: var(--space-4);
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+        min-width: 0;
+    }
+
+    &__title {
+        margin: 0;
+        font-family: var(--font-serif);
+        font-size: var(--font-size-xxl);
+        font-weight: 600;
+        line-height: 1.15;
+        overflow-wrap: anywhere;
+
+        @include mobile {
+            font-size: var(--font-size-xl);
+        }
+    }
+
+    &__meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--space-3);
+        margin: 0;
+        color: var(--color-text-muted);
+    }
+
+    &__actions {
+        display: flex;
+        gap: var(--space-3);
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__action {
+        @include mobile {
+            flex: 1;
+        }
+    }
+}

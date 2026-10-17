@@ -1,0 +1,9 @@
+// Media queries can't read CSS custom properties, so the breakpoint is a Sass value.
+// Keep in sync with MOBILE_MEDIA_QUERY in composables/useMediaQuery.ts.
+$mobile-max-width: 768px;
+
+@mixin mobile {
+    @media (width < $mobile-max-width) {
+        @content;
+    }
+}
